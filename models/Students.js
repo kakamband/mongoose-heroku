@@ -6,13 +6,14 @@ const StudentSchema = new mongoose.Schema({
     required: true,
   },
   age: {
-    type: String,
+    type: Number,
   },
   gender: {
     type: String,
   },
   class: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "classroom",
   },
 });
 

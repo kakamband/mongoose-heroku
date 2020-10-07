@@ -9,12 +9,14 @@ const localPort = PORT || 5000;
 const { dbMongo } = require("./config");
 
 const studentRouter = require("./routes/students/StudentsController");
+const classroomRouter = require('./routes/classroom/classroomController');
 
 app.get("/", (req, res) => {
   res.send("test get");
 });
 
 app.use(studentRouter)
+app.use(classroomRouter)
 
 if (dbMongo) {
   app.listen(localPort, (req, res) => {

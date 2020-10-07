@@ -5,9 +5,8 @@ const Students = require("../../models/Students");
 
 // get
 app.get("/students", async (req, res) => {
-  console.log("student", Students);
-  const studentsGet = await Students.find({});
-
+  // console.log("student", Students);
+  const studentsGet = await Students.find().populate("class", "name floor");
   try {
     res.send(studentsGet);
   } catch (err) {
@@ -17,7 +16,7 @@ app.get("/students", async (req, res) => {
 });
 
 app.get("/students/:id", async (req, res) => {
-  console.log("student", Students);
+  // console.log("student", Students);
   const studentsGet = await Students.findById(req.params.id);
 
   try {

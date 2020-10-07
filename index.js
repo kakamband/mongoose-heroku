@@ -8,7 +8,7 @@ const localPort = PORT || 5000;
 
 const { dbMongo } = require("./config");
 
-const studentRouter = require("./routes/StudentsController");
+const studentRouter = require("./routes/students/StudentsController");
 
 app.get("/", (req, res) => {
   res.send("test get");

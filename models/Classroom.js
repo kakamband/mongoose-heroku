@@ -20,5 +20,5 @@ const ClassSchema = new mongoose.Schema({
   },
 });
 
-const Classroom = mongoose.model("students", ClassSchema);
+const Classroom = mongoose.model("classroom", ClassSchema);
 module.exports = Classroom;

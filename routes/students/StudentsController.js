@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const Students = require("../models/Students");
+const Students = require("../../models/Students");
 
 // get
 app.get("/students", async (req, res) => {
